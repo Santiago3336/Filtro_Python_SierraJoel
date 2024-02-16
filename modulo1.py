@@ -56,27 +56,16 @@ def opcion1():
 
         print("ingrese la direccion ")
         direct = input("")
-        with open("rutaFile", 'r') as file:
-            jsonDato = json.load(file)
-        if nombre in jsonDato:
-            jsonDato['direccion'].append(nombre)
+        ingresarDatos(ruta_archivo,direct)
 
-        with open("rutaFile", 'w') as outfile:
-            json.dump(jsonDato, outfile, indent=4)
-
-
-        with open("usuarios.json", 'w') as outfile:
-             []['nombre'] = (nombre,outfile)
-
-        print("ingrese la direccion")
-        direccion = input("")
-        with open("usuarios.json", 'w') as outfile:
-             []['direccion'] = (direccion,outfile)
+        print("ingrese el estado ")
+        estado = input("")
+        ingresarDatos(ruta_archivo, estado)
 
         print("ingrese el telefono")
         tel = input(int())
-        with open("usuarios.json", 'w') as outfile:
-             []['telefono'] = (tel,outfile)
+        ingresarDatos(ruta_archivo,tel)
+
 
     if rtaOpcion1 == 2:
          

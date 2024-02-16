@@ -1,12 +1,1 @@
-{
-    "nombre":"",
-    "direccion":"",
-    "estado": "UsuarioNuevo",
-    "telefono": 0,
-    "consultas": "",
-    "reclamaciones": "",
-    "sugerencias": "",
-    "fidelidad": "",
-    "ofrecido": "",
-    "servicio": ""
-}
+usuarios.json

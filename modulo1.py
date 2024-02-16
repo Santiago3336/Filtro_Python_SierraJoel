@@ -75,5 +75,5 @@ def opcion1():
             datos = (open.json,openfile)
 
         
-        
+opcion1()
         

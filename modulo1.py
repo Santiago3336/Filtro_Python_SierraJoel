@@ -22,17 +22,14 @@ def crearJson():
 
 CrearUsuarios = crearJson()
 
-def ingresarDatos():
+def ingresarDatos(ruta_archivo, dato,nuevo_item ):
 
     import json
 
     with open("usuarios.json", 'r') as openfile:
         jsonDato = json.load(openfile)
-        if ruta in jsonDato:
-            jsonDato[ruta].append(nuevo_item)
-        else:
-            print(f"La ruta {ruta} no existe en el JSON.")
-            return
+        if dato in jsonDato:
+            jsonDato[dato].append(nuevo_item)
 
     with open(ruta_archivo, 'w') as file:
         json.dump(jsonDato, file, indent=4)
@@ -50,15 +47,11 @@ def opcion1():
 
         import json
 
-        print("ingrese el nombre que desea ingresar")
-        nombre = input("")
-        with open("rutaFile", 'r') as file:
-            jsonDato = json.load(file)
-        if nombre in jsonDato:
-            jsonDato['nombre'].append(nombre)
+        ruta_archivo = 'usuarios.json'
 
-        with open("rutaFile", 'w') as outfile:
-            json.dump(jsonDato, outfile, indent=4)
+        print("ingrese el nombre que desea ingresar")
+        nom = input("")
+        ingresarDatos(ruta_archivo, nom)
 
 
         print("ingrese la direccion ")

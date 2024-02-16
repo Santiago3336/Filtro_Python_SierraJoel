@@ -1,27 +1,3 @@
-def crearJson():
-
-    import json
-
-    datos = {
-        "nombre":[],
-        "direccion":[],
-        "estado": [],
-        "telefono": [],
-        "consultas": [],
-        "reclamaciones": [],
-        "sugerencias": [],
-        "fidelidad": [],
-        "ofrecido": [],
-        "servicio": []
-        }
-    jsonData = json.dumps(datos, indent=4)
-
-    rutaFile = "usuarios.json"
-    with open("usuarios.json", 'w') as outfile:
-        outfile.write(rutaFile)
-
-CrearUsuarios = crearJson()
-
 def ingresarDatos(ruta_archivo, dato,nuevo_item ):
 
     import json

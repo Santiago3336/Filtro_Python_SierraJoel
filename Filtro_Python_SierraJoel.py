@@ -11,6 +11,7 @@ rtaMenu = input(int())
 
 if rtaMenu ==1:
     opcion1()
+    
 
 
 
